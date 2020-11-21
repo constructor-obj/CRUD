@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="js/js.js" ></script>
+	<body>
+		<table border="1" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="2" align="center">用户注册信息</td>
+			</tr>
+			<tr>
+				<td>用户名</td>
+				<td>
+					<input type="text" id="user" style="width:150px" />
+				</td>
+			</tr>
+			<tr>
+				<td>密码</td>
+				<td>
+					<input type="password" id="password" style="width:150px" />
+				</td>
+			</tr>
+			<tr>
+				<td>籍贯</td>
+				<td>
+					<select id="place">
+						<option value="">请选择</option>
+						<option value="1">浙江</option>
+						<option value="2">河南</option>
+						<option value="3">北京</option>
+						<option value="4">重庆</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>兴趣</td>
+				<td>
+					<input type="checkbox" name="interest" value="篮球"/>篮球
+                    <input type="checkbox" name="interest" value="足球"/>足球
+                    <input type="checkbox" name="interest" value="书法"/>书法
+                    <input type="checkbox" name="interest" value="音乐"/>音乐
+                    <br>
+                    <input type="checkbox" name="interest" value="绘画"/>绘画
+                    <input type="checkbox" name="interest" value="散打"/>散打
+                    <input type="checkbox" name="interest" value="瑜伽"/>瑜伽
+                    <input type="checkbox" name="interest" value="其他"/>其他
+				</td>
+			</tr>
+			<tr>
+                <td>政治面貌 </td>
+                <td>
+                    <input type="radio" name="identity"/>党员
+                    <input type="radio" name="identity"/>团员
+                    <input type="radio" name="identity"/>群众
+                </td>
+            </tr>
+            <tr>
+            	<td colspan="2" align="center">
+            		<input type="button" id="submit" value="提交"/>
+            		<input type="button" id="reset" value="重置" />
+            	</td>
+            </tr>
+		</table>
+		<br /><br /><br /><br />
+		<div class="">
+			<table border="1" cellspacing="0" cellpadding="0" id="listTable">
+				<tr>
+					<td>选中</td>
+					<td>用户名</td>
+					<td>密码</td>
+					<td>籍贯</td>
+					<td>兴趣</td>
+					<td>政治面貌</td>
+					<td>操作</td>
+				</tr>
+				<tr>
+					<td>
+						<label>全选</label>
+						<input type="checkbox" name="item" onclick="checkAll(this);"/>
+					</td>
+					<td  colspan="6" align="center">
+						<input type="button" value="选中删除" onclick="delRow();"/>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="item"/></td>
+					<td>007</td>
+					<td>123456</td>
+					<td>浙江</td>
+					<td>书法 绘画 瑜伽</td>
+					<td>团员</td>
+					<td>
+						<input type="button" value="删除" onclick="del(this);"/>
+						<input type="button" name="update" value="修改" onclick="modify(this)"/>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<p id="demo"></p>
+	</body>
+</html>
